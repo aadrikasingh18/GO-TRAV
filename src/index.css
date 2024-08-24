@@ -6,7 +6,8 @@
 :root {
   /* --primaryClr: #fe4e37; */
   --primaryClr: #ddbf68;
-  --secondaryClr: #fffaf9;
+  /* --secondaryClr: #fffaf9; */
+  --secondaryClr: #e2fbf5;
   --bgClr: #f8f9fd;
   --white: #ffffff;
   --black: black;

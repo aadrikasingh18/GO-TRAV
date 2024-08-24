@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner/Banner";
-import AdvanceSearch from "../components/AdvanceSearch/AdvanceSearch";
+// import AdvanceSearch from "../components/AdvanceSearch/AdvanceSearch";
 import Features from "../components/Features/Features";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
@@ -10,12 +10,13 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./home.css";
 
-import tour4 from "../assets/images/tour/Tokyo.png";
-import tour5 from "../assets/images/tour/bali-1.png";
-import tour6 from "../assets/images/tour/bangkok.png";
-import tour7 from "../assets/images/tour/cancun.png";
-import tour8 from "../assets/images/tour/nah-trang.png";
-import tour9 from "../assets/images/tour/phuket.png";
+import tour1 from "../assets/images/tour/tour-1.jpg";
+import tour2 from "../assets/images/tour/tour-2.jpg";
+import tour3 from "../assets/images/tour/tour-3.jpg";
+import tour4 from "../assets/images/tour/tour-4.jpg";
+import tour5 from "../assets/images/tour/tour-5.jpg";
+import tour6 from "../assets/images/tour/tour-6.jpg";
+
 import PopularPlace from "../components/PopularPlace/PopularPlace";
 import Gallery from "../components/Gallery/Gallery";
 
@@ -72,80 +73,81 @@ const Home = () => {
   const destinations = [
     {
       id: 0,
-      name: "Bali",
-      tours: "5 tours and activities",
-      image: tour5,
+      name: "New York",
+      tours: "5 activities",
+      image: tour1,
       link: "tour-name",
       shortDes: "",
       link: "/tour",
-      location: "dehradun",
+      location: "New York",
     },
     {
       id: 1,
-      name: "Tokyo",
-      tours: "9 tours and activities",
+      name: "Singapore",
+      tours: "7 activities",
+      image: tour2,
+      link: "tour-name",
+      shortDes: "",
+      link: "/tour",
+      location: "Singapore",
+    },
+    {
+      id: 2,
+      name: "Dubai",
+      tours: "6 activities",
+      image: tour3,
+      link: "tour-name",
+      shortDes: "",
+      link: "/tour",
+      location: "Dubai",
+    },
+    {
+      id: 3,
+      name: "Paris",
+      tours: "3 activities",
       image: tour4,
       link: "tour-name",
       shortDes: "",
       link: "/tour",
-      location: "Rishikesh",
+      location: "Paris",
     },
     {
-      id: 2,
-      name: "Bangkok",
-      tours: "5 tours and activities",
+      id: 4,
+      name: "Delhi",
+      tours: "7 activities",
+      image: tour5,
+      link: "tour-name",
+      shortDes: "",
+      link: "/tour",
+      location: "Delhi",
+    },
+    {
+      id: 5,
+      name: "Switzerland",
+      tours: "3 activities",
       image: tour6,
       link: "tour-name",
       shortDes: "",
       link: "/tour",
-      location: "Mussoorie",
-    },
-    {
-      id: 3,
-      name: "Cancun",
-      tours: "4 tours and activities",
-      image: tour7,
-      link: "tour-name",
-      shortDes: "",
-      link: "/tour",
-      location: "Uttarkhashi",
-    },
-    {
-      id: 4,
-      name: "Nha Trang",
-      tours: "9 tours and activities ",
-      image: tour8,
-      link: "tour-name",
-      shortDes: "",
-      link: "/tour",
-      location: "Manali",
-    },
-    {
-      id: 5,
-      name: "Phuket",
-      tours: "4 tours and activities",
-      image: tour9,
-      link: "tour-name",
-      shortDes: "4 tours and activities",
-      link: "/tour",
-      location: "Haridwar",
+      location: "New York",
     },
   ];
 
   return (
     <>
       <Banner />
+
       {/* <AdvanceSearch /> */}
+      
       <Features />
 
       {/* tour seciton start */}
-
       <section className="tours_section slick_slider">
         <Container>
           <Row>
             <Col md="12">
               <div className="main_heading">
-                <h1> Top Destination For Your Next Vacation </h1>
+                <h1> Top Destinations For Your Next Vacation </h1>
               </div>
             </Col>
           </Row>
