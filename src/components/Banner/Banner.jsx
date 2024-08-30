@@ -54,7 +54,7 @@ const Banner = () => {
             <Carousel.Caption>
               <div className="slider_des">
                 <h5 className="heading">
-                  READY FOR THE <span>ADVENTURE?</span>
+                  READY FOR THE <span>ADVENTURES?</span>
                 </h5>
                 {/* <p className="sub_text">
                 </p> */}
