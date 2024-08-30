@@ -1,8 +1,9 @@
 footer {
-  background: #24565C;
+  /* background: #24565C; */
+  background: var(--secondaryClr);
 }
 
-.text-light {
+.quotation, .copy {
   display: flex;
   justify-content: center;
   padding: 0.75rem;
@@ -23,6 +24,7 @@ footer {
     z-index: 99999;
     font-size: 26px;
     color:white;
+    /* color:black; */
     line-height: 47px;
     text-align: center;
     position: fixed;

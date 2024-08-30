@@ -20,7 +20,7 @@ import tour7 from "../assets/images/tour/tour-7.jpg";
 import tour8 from "../assets/images/tour/tour-8.jpg";
 
 import PopularPlace from "../components/PopularPlace/PopularPlace";
-import Gallery from "../components/Gallery/Gallery";
+
 
 const Home = () => {
   var settings = {
@@ -212,11 +212,9 @@ const Home = () => {
               <h2 className="heading">
                 READY FOR UNFORGATABLE TRAVEL. REMEMBER US!
               </h2>
-              <p className="text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,{" "}
-              </p>
+              {/* <p className="text">
+                
+              </p> */}
             </Col>
             <Col md="4" className="text-center mt-3 mt-md-0">
               <a
@@ -231,23 +229,6 @@ const Home = () => {
           </Row>
         </Container>
         <div className="overlay"></div>
-      </section>
-
-      <section className="gallery">
-        <Container>
-          <Row>
-            <Col md="12">
-              <div className="main_heading">
-                <h1>Photo Gallery </h1>
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col md="12">
-              <Gallery />
-            </Col>
-          </Row>
-        </Container>
       </section>
     </>
   );
