@@ -119,7 +119,7 @@ const PopularPlace = () => {
         <Row>
           <Col md="12">
             <div className="main_heading">
-              <h1> Popular Activities </h1>
+              <h1> Our Top Recommendations </h1>
             </div>
           </Col>
         </Row>

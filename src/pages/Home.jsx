@@ -16,6 +16,8 @@ import tour3 from "../assets/images/tour/tour-3.jpg";
 import tour4 from "../assets/images/tour/tour-4.jpg";
 import tour5 from "../assets/images/tour/tour-5.jpg";
 import tour6 from "../assets/images/tour/tour-6.jpg";
+import tour7 from "../assets/images/tour/tour-7.jpg";
+import tour8 from "../assets/images/tour/tour-8.jpg";
 
 import PopularPlace from "../components/PopularPlace/PopularPlace";
 import Gallery from "../components/Gallery/Gallery";
@@ -73,7 +75,7 @@ const Home = () => {
   const destinations = [
     {
       id: 0,
-      name: "New York",
+      name: "New York, USA",
       tours: "5 activities",
       image: tour1,
       link: "tour-name",
@@ -83,7 +85,7 @@ const Home = () => {
     },
     {
       id: 1,
-      name: "Paris",
+      name: "Paris, France",
       tours: "3 activities",
       image: tour2,
       link: "tour-name",
@@ -93,7 +95,7 @@ const Home = () => {
     },
     {
       id: 2,
-      name: "Delhi",
+      name: "Delhi, India",
       tours: "7 activities",
       image: tour3,
       link: "tour-name",
@@ -103,7 +105,7 @@ const Home = () => {
     },
     {
       id: 3,
-      name: "Switzerland",
+      name: "Interlaken, Switzerland",
       tours: "3 activities",
       image: tour4,
       link: "tour-name",
@@ -123,13 +125,33 @@ const Home = () => {
     },
     {
       id: 5,
-      name: "Dubai",
+      name: "Dubai, UAE",
       tours: "6 activities",
       image: tour6,
       link: "tour-name",
       shortDes: "",
       link: "/tour",
       location: "Dubai",
+    },
+    {
+      id: 6,
+      name: "Sydney, Australia",
+      tours: "3 activities",
+      image: tour7,
+      link: "tour-name",
+      shortDes: "",
+      link: "/tour",
+      location: "Sydney",
+    },
+    {
+      id: 7,
+      name: "London, United Kingdom",
+      tours: "2 activities",
+      image: tour8,
+      link: "tour-name",
+      shortDes: "",
+      link: "/tour",
+      location: "London",
     },
   ];
 
