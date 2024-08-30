@@ -87,7 +87,8 @@
 
 
 .popular .card .card-body .text {
-    margin-left: 16px;
+    margin-left: 18px;
+    margin-top: 5px;
     display: block;
     font-size: 13px;
 }

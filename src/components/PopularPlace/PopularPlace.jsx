@@ -2,14 +2,13 @@ import React from "react";
 import "../PopularPlace/popular-place.css";
 import { Card, Col, Container, Row, Stack } from "react-bootstrap";
 
-import Anchorage from "../../assets/images/popular/Anchorage To La Paz.jpg";
-import Singapore from "../../assets/images/popular/Discover Singapore.png";
-import Kiwiana from "../../assets/images/popular/Kiwiana Panorama.jpg";
-import Quito from "../../assets/images/popular/Anchorage To Quito.jpg";
-import Cuzco from "../../assets/images/popular/Cuzco To Anchorage.jpg";
-import Ushuaia from "../../assets/images/popular/Anchorage To Ushuaia.jpg";
-import Santiago from "../../assets/images/popular/Anchorage To Santiago.jpg";
-import Explorer from "../../assets/images/popular/LA Explorer.jpg";
+import USS from "../../assets/images/popular/Universal Studios Singapore.jpg";
+import RWS from "../../assets/images/popular/River Wonders Singapore.jpg";
+import ZOO from "../../assets/images/popular/Singapore Zoo Tickets.jpg";
+import SET from "../../assets/images/popular/Stonehenge Entry Tickets.jpg";
+import BP from "../../assets/images/popular/Buckingham Palace.jpg";
+import ST from "../../assets/images/popular/SkyFeast at Sydney Tower.jpg";
+
 
 const PopularPlace = () => {
   
@@ -17,99 +16,75 @@ const PopularPlace = () => {
   const populars = [
     {
       id: 0,
-      tilte: "Discover Singapore",
-      image: Singapore,
-      location: "European Way, Southampton, United Kingdom",
-      category: ["Escorted Tour", "Rail Tour"],
-      days: "5 days - 4 nights",
-      price: 100,
-      afterDiscount: 92,
-      rating: 3,
+      tilte: "Universal Studios Singapore",
+      image: USS,
+      location: "Singapore",
+      category: ["Tour & Cruise"],
+      days: "1 day",
+      price: 6000,
+      afterDiscount: 5500,
+      rating: 4.2,
       reviews: 5,
     },
     {
       id: 1,
-      tilte: "Kiwiana Panorama",
-      image: Kiwiana,
-      location: "European Way, Southampton, United Kingdom",
-      category: ["River Cruise", "Wildlife"],
-      days: "2 days - 1 nights",
-      price: 87,
-      afterDiscount: 82,
+      tilte: "River Wonders Singapore",
+      image: RWS,
+      location: "Singapore",
+      category: ["Wildlife"],
+      days: "1 day",
+      price: 2800,
+      afterDiscount: 2500,
       rating: 4,
       reviews: 9,
     },
     {
       id: 2,
-      tilte: "Anchorage To Quito",
-      image: Quito,
-      location: "European Way, Southampton, United Kingdom",
-      category: ["Escorted Tour", "River Cruise"],
-      days: "2 days - 1 nights",
-      price: 87,
-      afterDiscount: 82,
-      rating: 4,
+      tilte: "Singapore Zoo Tickets",
+      image: ZOO,
+      location: "Singapore",
+      category: ["Escorted Tour"],
+      days: "1 day",
+      price: 3100,
+      afterDiscount: 3000,
+      rating: 4.5,
       reviews: 9,
     },
     {
       id: 3,
-      tilte: "Anchorage To La Paz",
-      image: Anchorage,
-      location: "European Way, Southampton, United Kingdom",
-      category: ["River Cruise", "Rail Tour"],
-      days: "unlimited",
-      price: 434,
-      afterDiscount: 0,
-      rating: 5,
-      reviews: 20,
+      tilte: "Stonehenge Entry Tickets",
+      image: SET,
+      location: "London",
+      category: ["Escorted Tour"],
+      days: "2 day",
+      price: 4100,
+      afterDiscount: 3800,
+      rating: 4.5,
+      reviews: 11,
     },
     {
       id: 4,
-      tilte: "Cuzco To Anchorage",
-      image: Cuzco,
-      location: "European Way, Southampton, United Kingdom",
-      category: ["River Cruise", "Tour & Cruise"],
-      days: "1 days - 9 hours",
-      price: 395,
-      afterDiscount: 0,
-      rating: 3,
-      reviews: 12,
+      tilte: "Buckingham Palace",
+      image: BP,
+      location: "London",
+      category: ["Escorted Tour"],
+      days: "1 day",
+      price: 2000,
+      afterDiscount: 1800,
+      rating: 4,
+      reviews: 19,
     },
     {
       id: 5,
-      tilte: "Anchorage To Ushuaia",
-      image: Ushuaia,
-      location: "European Way, Southampton, United Kingdom",
-      category: ["Escorted Tour", "Wildlife"],
-      days: "5 days - 4 nights",
-      price: 93,
-      afterDiscount: 0,
-      rating: 3,
+      tilte: "SkyFeast at Sydney Tower",
+      image: ST,
+      location: "Sydney",
+      category: ["Escorted Tour"],
+      days: "1 day",
+      price: 4000,
+      afterDiscount: 3500,
+      rating: 4.8,
       reviews: 12,
-    },
-    {
-      id: 6,
-      tilte: "Anchorage To Santiago",
-      image: Santiago,
-      location: "European Way, Southampton, United Kingdom",
-      category: ["Escorted Tour", "Wildlife"],
-      days: "1 day - 1 night",
-      price: 42,
-      afterDiscount: 0,
-      rating: 5,
-      reviews: 18,
-    },
-    {
-      id: 7,
-      tilte: "LA Explorer",
-      image: Explorer,
-      location: "European Way, Southampton, United Kingdom",
-      category: ["Rail Tour", "Tour & Cruise"],
-      days: "1 night",
-      price: 99,
-      afterDiscount: 0,
-      rating: 4,
-      reviews: 22,
     },
   ];
 
@@ -158,7 +133,7 @@ const PopularPlace = () => {
 
               <Card.Footer className="py-4">
                 {val.afterDiscount ? (
-                  <p className="text-decoration-line-through"> ${val.price.toFixed(2)}</p>
+                  <p className="text-decoration-line-through"> Rs{val.price.toFixed(2)}</p>
                 ): ""}
                
                 <Stack
@@ -166,7 +141,7 @@ const PopularPlace = () => {
                   className="justify-content-between  mt-3"
                 >
                   <p>
-                    From <b>{val.afterDiscount ? val.afterDiscount.toFixed(2) : val.price.toFixed(2)}</b>
+                    From Rs <b>{val.afterDiscount ? val.afterDiscount.toFixed(2) : val.price.toFixed(2)}</b>
                   </p>
                   <p>
                   
