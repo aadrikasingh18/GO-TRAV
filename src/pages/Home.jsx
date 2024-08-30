@@ -1,15 +1,12 @@
 import React from "react";
 import Banner from "../components/Banner/Banner";
-// import AdvanceSearch from "../components/AdvanceSearch/AdvanceSearch";
+import AdvanceSearch from "../components/AdvanceSearch/AdvanceSearch";
 import Features from "../components/Features/Features";
 import { Container, Row, Col, Card } from "react-bootstrap";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import "./home.css";
-
 import tour1 from "../assets/images/tour/tour-1.jpg";
 import tour2 from "../assets/images/tour/tour-2.jpg";
 import tour3 from "../assets/images/tour/tour-3.jpg";
@@ -18,7 +15,6 @@ import tour5 from "../assets/images/tour/tour-5.jpg";
 import tour6 from "../assets/images/tour/tour-6.jpg";
 import tour7 from "../assets/images/tour/tour-7.jpg";
 import tour8 from "../assets/images/tour/tour-8.jpg";
-
 import PopularPlace from "../components/PopularPlace/PopularPlace";
 
 
@@ -29,7 +25,6 @@ const Home = () => {
     autoplay: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-
     responsive: [
       {
         breakpoint: 1024,
@@ -159,7 +154,7 @@ const Home = () => {
     <>
       <Banner />
 
-      {/* <AdvanceSearch /> */}
+      <AdvanceSearch />
       
       <Features />
 

@@ -32,13 +32,11 @@ const Header = () => {
       header.classList.remove('is-sticky')
   }
 
-
   return (
-
     <header className="header-section">
       <Container>
-
         <Navbar expand="lg" className="p-0">
+
           {/* Logo Section  */}
           <Navbar.Brand>
             <NavLink to="/">
@@ -46,22 +44,21 @@ const Header = () => {
             </NavLink>
           </Navbar.Brand>
 
-          {/* End Logo Section  */}
-
+          {/* End Logo Section */}
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-lg`}
             aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
             placement="start"
             show={open}
           >
-            {/*mobile Logo Section  */}
+            {/* mobile Logo Section */}
             <Offcanvas.Header>
-              <h1 className="logo">Weekendmonks</h1>
+              <h1 className="logo">Go Trav</h1>
               <span className="navbar-toggler ms-auto" onClick={toggleMenu}>
                 <i className="bi bi-x-lg"></i>
               </span>
             </Offcanvas.Header>
-            {/*end mobile Logo Section  */}
+            {/* End of Mobile Logo Section */}
 
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
@@ -81,15 +78,23 @@ const Header = () => {
                 >
                   <NavDropdown.Item href="#action3">
                     {" "}
-                    SPAIN TOURS
+                    INDIA
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action4">
                     {" "}
-                    ITALY TOURS{" "}
+                    ITALY {" "}
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action4">
                     {" "}
-                    FRANCE TOURS{" "}
+                    FRANCE {" "}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action4">
+                    {" "}
+                    AUSTRALIA {" "}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action4">
+                    {" "}
+                    SPAIN {" "}
                   </NavDropdown.Item>
                 </NavDropdown>
                 <NavLink className="nav-link" to="/">
