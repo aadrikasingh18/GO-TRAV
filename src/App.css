@@ -1,6 +1,7 @@
 .primaryBtn{
   background: var(--primaryClr);
-  padding: 8px 15px;
+  padding: 1px 5px;
+  margin-left: -25px;
   font-size: var(--bodyText);
   color:var(--white);
   text-align: center;
@@ -25,7 +26,6 @@
   color:var(--black);
   font-weight: bold;
   font-family: var(--fontFamily1);
-
 }
 
 .slick_slider .slick-arrow  {

@@ -8,9 +8,11 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+
+      <div id="home">
+        <Home />
+      </div>
+      
       <Footer />
     </>
   );

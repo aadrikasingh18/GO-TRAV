@@ -148,11 +148,13 @@ const Home = () => {
       <Banner />
 
       <AdvanceSearch />
-      
-      <Features />
+
+      <div id="features">
+        <Features />
+      </div>
 
       {/* tour seciton start */}
-      <section className="tours_section slick_slider">
+      <section className="tours_section slick_slider" id="tours">
         <Container>
           <Row>
             <Col md="12">
@@ -187,12 +189,13 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+      {/* tour seciton end */}
 
-      {/* tour seciton start */}
+      <div id="recommendations">
+        <PopularPlace />
+      </div>
 
-      <PopularPlace />
-
-      <section className="call_us">
+      <section className="call_us" id="bookings">
         <Container>
           <Row className="align-items-center">
             <Col md="8">
@@ -200,9 +203,6 @@ const Home = () => {
               <h2 className="heading">
                 READY FOR UNFORGATABLE TRAVEL. REMEMBER US!
               </h2>
-              {/* <p className="text">
-                
-              </p> */}
             </Col>
             <Col md="4" className="text-center mt-3 mt-md-0">
               <a

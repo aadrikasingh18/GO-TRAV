@@ -32,7 +32,9 @@ const AdvanceSearch = () => {
                     label="Location"
                     onSelect={selectedLocation}
                     options={[
-                      "USA, Turkish",
+                      "New York, USA",
+                      "Dubai, UAE",
+                      "Delhi, India",
                       "Tokyo, Japan",
                       "Sydney, Australia",
                       "Melbourne, Australia",

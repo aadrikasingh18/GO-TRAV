@@ -34,8 +34,8 @@ const Footer = () => {
     <>
       <footer className="p-2">
         <Container>
-        <p className="quotation dancing-script-travel">To Travel is to Live </p>
-        <p className="copy"> Copyright @ 2024 </p>
+        <p className="quotation dancing-script-travel">To Travel is to Live!</p>
+        <p className="copy"> Copyright @ 2025 </p>
         </Container>
       </footer>
 

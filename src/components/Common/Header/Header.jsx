@@ -61,17 +61,20 @@ const Header = () => {
 
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink className="nav-link" to="/">
-                  Home
-                </NavLink>
-                <NavLink className="nav-link" to="/">
-                  ABOUT US
-                </NavLink>
-                <NavLink className="nav-link" to="/">
-                  TOURS
-                </NavLink>
 
-                <NavDropdown
+                <a className="nav-link" href="#home">
+                  Home
+                </a>
+
+                <a className="nav-link" href="#features">
+                  About Us
+                </a>
+
+                <a className="nav-link" href="#tours">
+                  Tours
+                </a>
+
+                {/* <NavDropdown
                   title="DESTINATION"
                   id={`offcanvasNavbarDropdown-expand-lg`}
                 >
@@ -95,26 +98,31 @@ const Header = () => {
                     {" "}
                     SPAIN {" "}
                   </NavDropdown.Item>
-                </NavDropdown>
-                <NavLink className="nav-link" to="/">
-                  GALLERY
-                </NavLink>
-                <NavLink className="nav-link" to="/">
-                  CONTACT
-                </NavLink>
+                </NavDropdown> */}
+
+                <a className="nav-link" href="#recommendations">
+                  Recommendations
+                </a>
+
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
+
           <div className="ms-md-4 ms-2">
-            <NavLink className="primaryBtn d-none d-sm-inline-block">
-              Book Now
-            </NavLink>
+            <div className="primaryBtn d-none d-sm-inline-block">
+              <Nav>
+                <a className="nav-link" href="#bookings">
+                  Book Now
+                </a>
+              </Nav>
+            </div>
+
             <li className="d-inline-block d-lg-none ms-3 toggle_btn">
               <i className={open ? "bi bi-x-lg" : "bi bi-list"} onClick={toggleMenu}></i>
             </li>
           </div>
-        </Navbar>
 
+        </Navbar>
       </Container>
     </header>
   );
