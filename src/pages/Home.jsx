@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Banner from "../components/Banner/Banner";
 import AdvanceSearch from "../components/AdvanceSearch/AdvanceSearch";
 import Features from "../components/Features/Features";
@@ -6,7 +7,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./home.css";
+import "./Home.css";
 import tour1 from "../assets/images/tour/tour-1.jpg";
 import tour2 from "../assets/images/tour/tour-2.jpg";
 import tour3 from "../assets/images/tour/tour-3.jpg";
@@ -170,17 +171,19 @@ const Home = () => {
                 {destinations.map((destination, inx) => {
                   return (
                     <div className="img-box" key={inx}>
-                      <Card>
-                        <Card.Img
-                          variant="top"
-                          src={destination.image}
-                          className="img-fluid"
-                          alt={destination.name}
-                        />
-                        <Card.Title>{destination.name}</Card.Title>
+                      <Link to={`/tours?location=${encodeURIComponent(destination.location)}`}>
+                        <Card>
+                          <Card.Img
+                            variant="top"
+                            src={destination.image}
+                            className="img-fluid"
+                            alt={destination.name}
+                          />
+                          <Card.Title>{destination.name}</Card.Title>
 
-                        <span className="tours">{destination.tours}</span>
-                      </Card>
+                          <span className="tours">{destination.tours}</span>
+                        </Card>
+                      </Link>
                     </div>
                   );
                 })}
@@ -205,14 +208,13 @@ const Home = () => {
               </h2>
             </Col>
             <Col md="4" className="text-center mt-3 mt-md-0">
-              <a
-                href="tel:6398312365"
+              <Link
+                to="/contact"
                 className="secondary_btn bounce"
-                rel="no"
               >
                 {" "}
                 Contact Us !
-              </a>
+              </Link>
             </Col>
           </Row>
         </Container>

@@ -1,0 +1,120 @@
+.contact-page {
+    padding-top: 0;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.contact-hero {
+    background: linear-gradient(135deg, var(--primaryClr, #007bff) 0%, #0056b3 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.contact-form-card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.contact-form-card h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--black, #333);
+}
+
+.contact-form-card .primaryBtn {
+    border: none !important;
+    outline: none !important;
+    margin-left: 0 !important;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.contact-form-card .primaryBtn:focus,
+.contact-form-card .primaryBtn:active,
+.contact-form-card .primaryBtn:focus-visible {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.info-icon {
+    font-size: 2rem;
+    color: var(--primaryClr, #007bff);
+    min-width: 50px;
+    text-align: center;
+}
+
+.info-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--black, #333);
+}
+
+.info-item p {
+    color: var(--gray, #666);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.info-item a {
+    color: var(--primaryClr, #007bff);
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact-hero p {
+        font-size: 1rem;
+    }
+
+    .contact-info {
+        margin-top: 30px;
+    }
+}

@@ -9,10 +9,12 @@
   background: var(--white);
   z-index: 999;
 }
+
 @keyframes smothScroll {
   0% {
     transform: translateY(-40px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -33,6 +35,29 @@ header {
   z-index: 999;
   padding: 12px 0px;
   width: 100%;
+  transition: all 0.3s ease;
+}
+
+header.has-background {
+  position: relative;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header.has-background .navbar .navbar-brand a,
+header.has-background .navbar .offcanvas-body a {
+  color: var(--black) !important;
+}
+
+header.has-background .toggle_btn {
+  color: var(--primaryClr) !important;
+}
+
+@media only screen and (max-width: 991px) {
+  header.has-background .navbar .toggle_btn {
+    border: 2px solid var(--primaryClr);
+    color: var(--primaryClr);
+  }
 }
 
 header .navbar .navbar-brand a {
@@ -82,7 +107,7 @@ header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
     border: 1px solid gainsboro;
   }
 
-  .offcanvas-header .logo{
+  .offcanvas-header .logo {
     font-size: 26px;
     color: var(--black) !important;
     font-family: var(--fontFamily1);
@@ -92,12 +117,12 @@ header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
 
   .offcanvas-body .nav-link {
     padding: 12px 0px;
-    color:var(--black);
+    color: var(--black);
   }
 
-  .offcanvas-body .dropdown-item{
+  .offcanvas-body .dropdown-item {
     padding: 12px 10px;
-    color:var(--black);
+    color: var(--black);
   }
 
 }

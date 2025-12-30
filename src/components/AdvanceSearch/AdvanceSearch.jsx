@@ -1,23 +1,32 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import "../AdvanceSearch/search.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
-// import
 import CustomDropdown from "../CustomDropdown/CustomDropdown";
+import { useApp } from "../../context/AppContext";
 
 const AdvanceSearch = () => {
+  const navigate = useNavigate();
+  const { updateSearchFilters } = useApp();
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const [location, setLocation] = useState("");
 
-  const selectedLocation =(value)=>{
-    console.log("Location", value)
-  }
+  const selectedLocation = (value) => {
+    setLocation(value);
+  };
 
-  const selectedGuest =(value)=>{
-    console.log("Guest ", value)
-  }
+  const handleSearch = () => {
+    updateSearchFilters({
+      location: location,
+      startDate: startDate,
+      endDate: endDate
+    });
+    navigate("/tours");
+  };
 
   return (
     <>
@@ -32,13 +41,15 @@ const AdvanceSearch = () => {
                     label="Location"
                     onSelect={selectedLocation}
                     options={[
-                      "New York, USA",
-                      "Dubai, UAE",
-                      "Delhi, India",
-                      "Tokyo, Japan",
-                      "Sydney, Australia",
-                      "Melbourne, Australia",
-                      "Paris, France",
+                      "New York",
+                      "Dubai",
+                      "Delhi",
+                      "Tokyo",
+                      "Sydney",
+                      "Melbourne",
+                      "Paris",
+                      "Singapore",
+                      "London",
                     ]}
                   />
                 </div>
@@ -50,8 +61,9 @@ const AdvanceSearch = () => {
                     selectsStart
                     startDate={startDate}
                     endDate={endDate}
-                   
+                    minDate={new Date()}
                     dateFormat="dd, MMMM, yyyy"
+                  // placeholderText="Select check-in date"
                   />
                 </div>
                 <div className="item-search item-search-2">
@@ -60,27 +72,20 @@ const AdvanceSearch = () => {
                     selected={endDate}
                     onChange={(date) => setEndDate(date)}
                     selectsEnd
-                    startDate={endDate}
-                    endDate={startDate}
+                    startDate={startDate}
+                    endDate={endDate}
+                    minDate={startDate || new Date()}
                     dateFormat="dd, MMMM, yyyy"
+                  // placeholderText="Select check-out date"
                   />
                 </div>
                 <div className="item-search bd-none">
-                  <CustomDropdown
-                    label="Guest"
-                    onSelect={selectedGuest}
-                    options={[
-                      "2 adults, 1 children",
-                      "	2 adults, 1 children",
-                      "2 adults, 3 children",
-                    ]}
-                  />
-                </div>
-                <div className="item-search bd-none">
-                    <Button className="primaryBtn flex-even d-flex justify-content-center">
-                    <i className="bi bi-search me-2"></i> Search 
-                    </Button>
-
+                  <Button
+                    className="primaryBtn flex-even d-flex justify-content-center"
+                    onClick={handleSearch}
+                  >
+                    <i className="bi bi-search me-2"></i> Search
+                  </Button>
                 </div>
               </div>
             </Col>

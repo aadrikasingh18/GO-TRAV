@@ -5,11 +5,13 @@ import {
   Offcanvas,
   Nav,
 } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "../Header/header.css";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const toggleMenu = () => {
     setOpen(!open);
@@ -31,7 +33,7 @@ const Header = () => {
   }
 
   return (
-    <header className="header-section">
+    <header className={`header-section ${!isHomePage ? "has-background" : ""}`}>
       <Container>
         <Navbar expand="lg" className="p-0">
 
@@ -60,60 +62,46 @@ const Header = () => {
 
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-
-                <a className="nav-link" href="#home">
-                  Home
-                </a>
-
-                <a className="nav-link" href="#features">
-                  About Us
-                </a>
-
-                <a className="nav-link" href="#tours">
-                  Tours
-                </a>
-
-                {/* <NavDropdown
-                  title="DESTINATION"
-                  id={`offcanvasNavbarDropdown-expand-lg`}
+                <NavLink
+                  to="/"
+                  className="nav-link"
+                  onClick={() => setOpen(false)}
                 >
-                  <NavDropdown.Item href="#action3">
-                    {" "}
-                    INDIA
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    {" "}
-                    ITALY {" "}
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    {" "}
-                    FRANCE {" "}
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    {" "}
-                    AUSTRALIA {" "}
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    {" "}
-                    SPAIN {" "}
-                  </NavDropdown.Item>
-                </NavDropdown> */}
+                  Home
+                </NavLink>
 
-                <a className="nav-link" href="#recommendations">
-                  Recommendations
-                </a>
+                <NavLink
+                  to="/about"
+                  className="nav-link"
+                  onClick={() => setOpen(false)}
+                >
+                  About Us
+                </NavLink>
 
+                <NavLink
+                  to="/tours"
+                  className="nav-link"
+                  onClick={() => setOpen(false)}
+                >
+                  Tours
+                </NavLink>
+
+                <NavLink
+                  to="/contact"
+                  className="nav-link"
+                  onClick={() => setOpen(false)}
+                >
+                  Contact
+                </NavLink>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
 
-          <div className="ms-md-4 ms-2">
+          <div className="ms-md-4 ms-2 d-flex align-items-center">
             <div className="primaryBtn d-none d-sm-inline-block">
-              <Nav>
-                <a className="nav-link" href="#bookings">
-                  Book Now
-                </a>
-              </Nav>
+              <NavLink to="/booking" className="nav-link">
+                Book Now
+              </NavLink>
             </div>
 
             <li className="d-inline-block d-lg-none ms-3 toggle_btn">
