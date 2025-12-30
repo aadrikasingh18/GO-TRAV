@@ -31,7 +31,7 @@ const TourDetail = () => {
     const tour = getTourById(id);
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(null);
-    const [guests, setGuests] = useState("2 adults, 1 children");
+    // const [guests, setGuests] = useState("2 adults, 1 children");
     const [quantity, setQuantity] = useState(1);
 
     if (!tour) {
@@ -47,12 +47,12 @@ const TourDetail = () => {
     }
 
     const handleAddToCart = () => {
-        addToCart(tour, quantity, startDate, endDate, guests);
+        addToCart(tour, quantity, startDate, endDate);
         navigate("/booking");
     };
 
     const handleBookNow = () => {
-        addToCart(tour, quantity, startDate, endDate, guests);
+        addToCart(tour, quantity, startDate, endDate);
         navigate("/booking");
     };
 
@@ -187,7 +187,7 @@ const TourDetail = () => {
                                         />
                                     </div>
 
-                                    <div className="form-group">
+                                    {/* <div className="form-group">
                                         <label>Guests</label>
                                         <select
                                             className="form-control"
@@ -199,10 +199,10 @@ const TourDetail = () => {
                                             <option>2 adults, 3 children</option>
                                             <option>4 adults</option>
                                         </select>
-                                    </div>
+                                    </div> */}
 
                                     <div className="form-group">
-                                        <label>Quantity</label>
+                                        <label>Person</label>
                                         <div className="quantity-selector">
                                             <Button
                                                 variant="outline-secondary"
@@ -254,4 +254,3 @@ const TourDetail = () => {
 };
 
 export default TourDetail;
-
