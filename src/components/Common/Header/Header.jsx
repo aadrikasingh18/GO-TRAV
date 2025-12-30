@@ -6,7 +6,7 @@ import {
   Nav,
 } from "react-bootstrap";
 import { NavLink, useLocation } from "react-router-dom";
-import "../Header/header.css";
+import "./header.css";
 
 const Header = () => {
   const [open, setOpen] = useState(false);

@@ -126,3 +126,11 @@ header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
   }
 
 }
+
+header .navbar .primaryBtn {
+  padding: 6px 10px !important;
+}
+
+header .navbar .primaryBtn .nav-link {
+  padding: 0;
+}

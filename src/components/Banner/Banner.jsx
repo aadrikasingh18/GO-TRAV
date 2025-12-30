@@ -4,7 +4,7 @@ import sliderImg1 from "../../assets/images/slider/1.jpg";
 import sliderImg2 from "../../assets/images/slider/2.jpg";
 import sliderImg3 from "../../assets/images/slider/3.jpg";
 import sliderImg4 from "../../assets/images/slider/4.jpg";
-import "../Banner/banner.css"
+import "./banner.css"
 
 const Banner = () => {
   return (

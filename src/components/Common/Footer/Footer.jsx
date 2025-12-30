@@ -3,7 +3,7 @@
 // scrollTop Function: When called, it smoothly scrolls the page back to the top.
 
 import React, { useState } from "react";
-import "../Footer/footer.css"
+import "./footer.css"
 import {Container} from "react-bootstrap";
 
 const Footer = () => {

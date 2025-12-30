@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
-import "../AdvanceSearch/search.css";
+import "./search.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import CustomDropdown from "../CustomDropdown/CustomDropdown";
 import { useApp } from "../../context/AppContext";
